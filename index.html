@@ -50,15 +50,18 @@
 
         .container {
             text-align: center;
-            padding: 40px;
+            padding: 20px; /* تم التعديل */
             max-width: 900px;
+            width: 90%; /* تم الإضافة */
             position: relative;
             z-index: 1;
         }
 
         .logo {
-            width: 350px;
-            height: 180px;
+            width: 35vw; /* تم التعديل لوحدة مرنة */
+            max-width: 350px; /* تم الإضافة لتحديد حد أقصى */
+            height: 18vw; /* تم التعديل لوحدة مرنة */
+            max-height: 180px; /* تم الإضافة لتحديد حد أقصى */
             margin: 0 auto 40px;
             background: 
                 linear-gradient(145deg, #ffffff 0%, #f8f9ff 100%);
@@ -122,8 +125,10 @@
         }
 
         .launch-button {
-            width: 320px;
-            height: 320px;
+            width: 35vw; /* تم التعديل لوحدة مرنة */
+            height: 35vw; /* تم التعديل لوحدة مرنة */
+            max-width: 320px; /* تم الإضافة لتحديد حد أقصى */
+            max-height: 320px; /* تم الإضافة لتحديد حد أقصى */
             margin: 0 auto;
             position: relative;
             cursor: pointer;
@@ -145,16 +150,16 @@
         }
 
         .launch-button::before {
-            width: 380px;
-            height: 380px;
+            width: 118%; /* تم التعديل ليكون نسبياً */
+            height: 118%; /* تم التعديل ليكون نسبياً */
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
 
         .launch-button::after {
-            width: 440px;
-            height: 440px;
+            width: 138%; /* تم التعديل ليكون نسبياً */
+            height: 138%; /* تم التعديل ليكون نسبياً */
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -181,7 +186,8 @@
             border-radius: 50%;
             background: 
                 linear-gradient(145deg, #ffffff 0%, #f0f7ff 50%, #e3f2fd 100%);
-            border: 15px solid rgba(255, 255, 255, 0.3);
+            border: 1.5vw solid rgba(255, 255, 255, 0.3); /* تم التعديل لوحدة مرنة */
+            max-border-width: 15px; /* تم الإضافة */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -480,6 +486,64 @@
             }
             75% {
                 transform: translateY(20px) translateX(5px);
+            }
+        }
+
+        /* --- استعلامات الوسائط (Media Queries) للتجاوب --- */
+        
+        /* شاشات الجوال الصغيرة (أقل من 768 بكسل) */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .logo {
+                width: 60vw;
+                height: 30vw;
+                margin-bottom: 30px;
+            }
+
+            h1 {
+                font-size: 8vw; /* تصغير حجم الخط الرئيسي */
+                line-height: 1.2;
+            }
+
+            .subtitle {
+                font-size: 4vw; /* تصغير حجم الخط الفرعي */
+                margin-bottom: 50px;
+            }
+
+            .launch-button {
+                width: 60vw; /* تصغير حجم الزر */
+                height: 60vw;
+                max-width: 280px;
+                max-height: 280px;
+            }
+
+            .circle-text {
+                font-size: 6vw; /* تصغير نص "تدشين" */
+            }
+
+            .countdown {
+                font-size: 12vw; /* تصغير العداد */
+            }
+
+            .success-message {
+                font-size: 6vw; /* تصغير رسالة النجاح */
+                margin-top: 30px;
+            }
+        }
+        
+        /* شاشات الجوال الأصغر (أقل من 480 بكسل) */
+        @media (max-width: 480px) {
+            .launch-button {
+                width: 70vw; /* زيادة طفيفة لملء الشاشة */
+                height: 70vw;
+            }
+
+            .logo {
+                width: 75vw;
+                height: 40vw;
             }
         }
     </style>
