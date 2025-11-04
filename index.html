@@ -15,10 +15,11 @@
 
         body {
             font-family: 'Tajawal', 'Segoe UI', sans-serif;
+            /* ** التعديل الرئيسي هنا: تم استبدال الخلفية المتعددة بالتدرج الخطي الناعم فقط 
+            ** لتوحيد اللون وتقليل "التقسيم"
+            */
             background: 
-                radial-gradient(circle at 20% 50%, rgba(30, 60, 114, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 50%, rgba(42, 82, 152, 0.3) 0%, transparent 50%),
-                linear-gradient(135deg, #0f1f3d 0%, #1e3c72 25%, #2a5298 50%, #4169e1 75%, #5a7fc4 100%);
+                linear-gradient(135deg, #0f1f3d 0%, #172a50 40%, #1e3c72 80%, #2a5298 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -28,7 +29,7 @@
             position: relative;
         }
 
-        /* خلفية متحركة */
+        /* خلفية متحركة (تأثير الجزيئات/النجوم - تم الإبقاء عليه) */
         body::before {
             content: '';
             position: absolute;
@@ -50,18 +51,18 @@
 
         .container {
             text-align: center;
-            padding: 20px; /* تم التعديل */
+            padding: 20px;
             max-width: 900px;
-            width: 90%; /* تم الإضافة */
+            width: 90%; 
             position: relative;
             z-index: 1;
         }
 
         .logo {
-            width: 35vw; /* تم التعديل لوحدة مرنة */
-            max-width: 350px; /* تم الإضافة لتحديد حد أقصى */
-            height: 18vw; /* تم التعديل لوحدة مرنة */
-            max-height: 180px; /* تم الإضافة لتحديد حد أقصى */
+            width: 35vw; 
+            max-width: 350px; 
+            height: 18vw; 
+            max-height: 180px; 
             margin: 0 auto 40px;
             background: 
                 linear-gradient(145deg, #ffffff 0%, #f8f9ff 100%);
@@ -71,7 +72,8 @@
             justify-content: center;
             box-shadow: 
                 0 20px 60px rgba(0, 0, 0, 0.4),
-                0 0 40px rgba(30, 60, 114, 0.3),
+                /* تم تعديل الظل هنا ليناسب الخلفية الموحدة */
+                0 0 40px rgba(42, 82, 152, 0.3),
                 inset 0 1px 0 rgba(255, 255, 255, 0.9);
             position: relative;
             transform: translateY(0);
@@ -125,10 +127,10 @@
         }
 
         .launch-button {
-            width: 35vw; /* تم التعديل لوحدة مرنة */
-            height: 35vw; /* تم التعديل لوحدة مرنة */
-            max-width: 320px; /* تم الإضافة لتحديد حد أقصى */
-            max-height: 320px; /* تم الإضافة لتحديد حد أقصى */
+            width: 35vw; 
+            height: 35vw; 
+            max-width: 320px; 
+            max-height: 320px; 
             margin: 0 auto;
             position: relative;
             cursor: pointer;
@@ -139,27 +141,27 @@
             transform: scale(1.02);
         }
 
-        /* حلقات خارجية */
+        /* حلقات خارجية (تم تعديل الشفافية قليلاً لتناسب الخلفية الموحدة) */
         .launch-button::before,
         .launch-button::after {
             content: '';
             position: absolute;
             border-radius: 50%;
-            border: 2px solid rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.15); /* زيادة الشفافية */
             animation: pulse-ring 3s ease-out infinite;
         }
 
         .launch-button::before {
-            width: 118%; /* تم التعديل ليكون نسبياً */
-            height: 118%; /* تم التعديل ليكون نسبياً */
+            width: 118%;
+            height: 118%;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
 
         .launch-button::after {
-            width: 138%; /* تم التعديل ليكون نسبياً */
-            height: 138%; /* تم التعديل ليكون نسبياً */
+            width: 138%;
+            height: 138%;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -186,8 +188,8 @@
             border-radius: 50%;
             background: 
                 linear-gradient(145deg, #ffffff 0%, #f0f7ff 50%, #e3f2fd 100%);
-            border: 1.5vw solid rgba(255, 255, 255, 0.3); /* تم التعديل لوحدة مرنة */
-            max-border-width: 15px; /* تم الإضافة */
+            border: 1.5vw solid rgba(255, 255, 255, 0.3); 
+            max-border-width: 15px; 
             display: flex;
             align-items: center;
             justify-content: center;
@@ -504,32 +506,32 @@
             }
 
             h1 {
-                font-size: 8vw; /* تصغير حجم الخط الرئيسي */
+                font-size: 8vw; 
                 line-height: 1.2;
             }
 
             .subtitle {
-                font-size: 4vw; /* تصغير حجم الخط الفرعي */
+                font-size: 4vw; 
                 margin-bottom: 50px;
             }
 
             .launch-button {
-                width: 60vw; /* تصغير حجم الزر */
+                width: 60vw; 
                 height: 60vw;
                 max-width: 280px;
                 max-height: 280px;
             }
 
             .circle-text {
-                font-size: 6vw; /* تصغير نص "تدشين" */
+                font-size: 6vw; 
             }
 
             .countdown {
-                font-size: 12vw; /* تصغير العداد */
+                font-size: 12vw; 
             }
 
             .success-message {
-                font-size: 6vw; /* تصغير رسالة النجاح */
+                font-size: 6vw; 
                 margin-top: 30px;
             }
         }
@@ -537,7 +539,7 @@
         /* شاشات الجوال الأصغر (أقل من 480 بكسل) */
         @media (max-width: 480px) {
             .launch-button {
-                width: 70vw; /* زيادة طفيفة لملء الشاشة */
+                width: 70vw; 
                 height: 70vw;
             }
 
