@@ -494,17 +494,15 @@
 
         /* --- استعلامات الوسائط (Media Queries) للتجاوب --- */
         
-        /* ** التعديل 2: إضافة استعلام وسائط للأجهزة اللوحية (الآيباد - بين 769 بكسل و 1024 بكسل) */
-        @media (min-width: 769px) and (max-width: 1024px) {
+        /* للأجهزة اللوحية الكبيرة (الآيباد برو - فوق 1024 بكسل) */
+        @media (min-width: 1025px) and (max-width: 1366px) {
             .container {
-                max-width: 800px;
+                max-width: 850px;
             }
             
             .logo {
-                width: 40vw; 
-                height: 20vw;
-                max-width: 300px;
-                max-height: 150px;
+                width: 280px;
+                height: 140px;
                 margin-bottom: 35px;
             }
             
@@ -513,19 +511,67 @@
             }
 
             .subtitle {
-                font-size: 1.3rem;
-                margin-bottom: 60px;
+                font-size: 1.35rem;
+                margin-bottom: 55px;
             }
 
             .launch-button {
-                width: 40vw; 
-                height: 40vw; 
-                max-width: 300px;
-                max-height: 300px;
+                width: 300px;
+                height: 300px;
+            }
+
+            .circle {
+                border-width: 12px;
             }
 
             .circle-text {
+                font-size: 2.4rem;
+            }
+
+            .countdown {
+                font-size: 4.8rem;
+            }
+            
+            .success-message {
                 font-size: 2.3rem;
+                margin-top: 45px;
+            }
+        }
+        
+        /* للأجهزة اللوحية (الآيباد - بين 769 بكسل و 1024 بكسل) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                max-width: 750px;
+                padding: 25px;
+            }
+            
+            .logo {
+                width: 260px;
+                height: 130px;
+                margin-bottom: 30px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 12px;
+            }
+
+            .subtitle {
+                font-size: 1.25rem;
+                margin-bottom: 50px;
+            }
+
+            .launch-button {
+                width: 280px;
+                height: 280px;
+            }
+
+            .circle {
+                border-width: 11px;
+            }
+
+            .circle-text {
+                font-size: 2.2rem;
             }
 
             .countdown {
@@ -533,11 +579,12 @@
             }
             
             .success-message {
-                font-size: 2.2rem;
+                font-size: 2.1rem;
+                margin-top: 40px;
             }
         }
         
-        /* شاشات الجوال الصغيرة (أقل من 768 بكسل) - تم الإبقاء عليها */
+        /* شاشات الجوال الصغيرة (أقل من 768 بكسل) */
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
@@ -580,7 +627,7 @@
             }
         }
         
-        /* شاشات الجوال الأصغر (أقل من 480 بكسل) - تم الإبقاء عليها */
+        /* شاشات الجوال الأصغر (أقل من 480 بكسل) */
         @media (max-width: 480px) {
             .launch-button {
                 width: 70vw; 
