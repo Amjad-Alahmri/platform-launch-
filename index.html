@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تدشين منصة الجودة وسلامة المرضى</title>
+    <title>تدشين منصة الادارة العامة للجودة وسلامة المرضى</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap');
         
@@ -15,11 +15,9 @@
 
         body {
             font-family: 'Tajawal', 'Segoe UI', sans-serif;
-            /* ** التعديل الرئيسي هنا: تم استبدال الخلفية المتعددة بالتدرج الخطي الناعم فقط 
-            ** لتوحيد اللون وتقليل "التقسيم"
-            */
+            /* تدرج أزرق فاتح قليلاً (بدأ من الداكن وانتهى بالأفتح) */
             background: 
-                linear-gradient(135deg, #0f1f3d 0%, #172a50 40%, #1e3c72 80%, #2a5298 100%);
+                linear-gradient(135deg, #0e2b4f 0%, #1a4a8a 40%, #2b70bf 80%, #3a91e6 100%); 
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -29,15 +27,15 @@
             position: relative;
         }
 
-        /* خلفية متحركة (تأثير الجزيئات/النجوم - تم الإبقاء عليه) */
+        /* خلفية متحركة (تأثير الجزيئات/النجوم) */
         body::before {
             content: '';
             position: absolute;
             width: 200%;
             height: 200%;
             background: 
-                radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px),
-                radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+                radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px), 
+                radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px); 
             background-size: 50px 50px;
             background-position: 0 0, 25px 25px;
             animation: moveBackground 20s linear infinite;
@@ -72,8 +70,8 @@
             justify-content: center;
             box-shadow: 
                 0 20px 60px rgba(0, 0, 0, 0.4),
-                /* تم تعديل الظل هنا ليناسب الخلفية الموحدة */
-                0 0 40px rgba(42, 82, 152, 0.3),
+                /* ظل أزرق أفتح قليلاً */
+                0 0 40px rgba(58, 145, 230, 0.3), 
                 inset 0 1px 0 rgba(255, 255, 255, 0.9);
             position: relative;
             transform: translateY(0);
@@ -91,7 +89,7 @@
             width: 100%;
             height: 100%;
             border-radius: 25px;
-            background: linear-gradient(145deg, transparent, rgba(30, 60, 114, 0.1));
+            background: linear-gradient(145deg, transparent, rgba(43, 112, 191, 0.1)); 
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -141,13 +139,13 @@
             transform: scale(1.02);
         }
 
-        /* حلقات خارجية (تم تعديل الشفافية قليلاً لتناسب الخلفية الموحدة) */
+        /* حلقات خارجية */
         .launch-button::before,
         .launch-button::after {
             content: '';
             position: absolute;
             border-radius: 50%;
-            border: 2px solid rgba(255, 255, 255, 0.15); /* زيادة الشفافية */
+            border: 2px solid rgba(255, 255, 255, 0.2); 
             animation: pulse-ring 3s ease-out infinite;
         }
 
@@ -188,7 +186,7 @@
             border-radius: 50%;
             background: 
                 linear-gradient(145deg, #ffffff 0%, #f0f7ff 50%, #e3f2fd 100%);
-            border: 1.5vw solid rgba(255, 255, 255, 0.3); 
+            border: 1.5vw solid rgba(255, 255, 255, 0.4); 
             max-border-width: 15px; 
             display: flex;
             align-items: center;
@@ -196,8 +194,9 @@
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 
                 0 20px 60px rgba(0, 0, 0, 0.4),
-                0 0 50px rgba(30, 60, 114, 0.3),
-                inset 0 -10px 30px rgba(30, 60, 114, 0.15),
+                /* ظل أزرق أفتح قليلاً */
+                0 0 50px rgba(43, 112, 191, 0.3), 
+                inset 0 -10px 30px rgba(43, 112, 191, 0.15), 
                 inset 0 10px 30px rgba(255, 255, 255, 0.8);
             position: relative;
             overflow: visible;
@@ -210,7 +209,7 @@
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(30, 60, 114, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(43, 112, 191, 0.18) 0%, transparent 70%); 
             animation: preGlow 2.5s ease-in-out infinite;
         }
 
@@ -228,9 +227,9 @@
         .circle:hover {
             transform: scale(1.05);
             box-shadow: 
-                0 25px 80px rgba(30, 60, 114, 0.5),
-                0 0 80px rgba(30, 60, 114, 0.4),
-                inset 0 -10px 30px rgba(30, 60, 114, 0.2),
+                0 25px 80px rgba(43, 112, 191, 0.5), 
+                0 0 80px rgba(43, 112, 191, 0.4), 
+                inset 0 -10px 30px rgba(43, 112, 191, 0.2), 
                 inset 0 10px 30px rgba(255, 255, 255, 0.9);
             border-color: rgba(255, 255, 255, 0.5);
         }
@@ -238,20 +237,20 @@
         .circle-text {
             font-size: 2.5rem;
             font-weight: 900;
-            color: #1e3c72;
+            color: #2b70bf; /* لون أزرق أفتح قليلاً */
             z-index: 2;
             transition: all 0.4s ease;
-            text-shadow: 0 2px 10px rgba(30, 60, 114, 0.2);
+            text-shadow: 0 2px 10px rgba(43, 112, 191, 0.2); 
             letter-spacing: 1px;
         }
 
         .countdown {
             font-size: 5rem;
             font-weight: 900;
-            color: #1e3c72;
+            color: #2b70bf; /* لون أزرق أفتح قليلاً */
             z-index: 2;
             animation: countdownPulse 1s ease-in-out;
-            text-shadow: 0 4px 20px rgba(30, 60, 114, 0.3);
+            text-shadow: 0 4px 20px rgba(43, 112, 191, 0.3); 
         }
 
         @keyframes countdownPulse {
@@ -270,8 +269,8 @@
             background: linear-gradient(145deg, #e3f2fd 0%, #bbdefb 50%, #90caf9 100%);
             animation: countingGlow 1s ease-in-out;
             box-shadow: 
-                0 0 50px rgba(30, 60, 114, 0.6),
-                0 0 100px rgba(30, 60, 114, 0.4),
+                0 0 50px rgba(43, 112, 191, 0.6), 
+                0 0 100px rgba(43, 112, 191, 0.4), 
                 0 20px 60px rgba(0, 0, 0, 0.4),
                 inset 0 0 50px rgba(255, 255, 255, 0.5);
         }
@@ -279,27 +278,28 @@
         @keyframes countingGlow {
             0%, 100% {
                 box-shadow: 
-                    0 0 40px rgba(30, 60, 114, 0.5),
-                    0 0 80px rgba(30, 60, 114, 0.3);
+                    0 0 40px rgba(43, 112, 191, 0.5), 
+                    0 0 80px rgba(43, 112, 191, 0.3); 
             }
             50% {
                 box-shadow: 
-                    0 0 70px rgba(30, 60, 114, 0.8),
-                    0 0 140px rgba(30, 60, 114, 0.5);
+                    0 0 70px rgba(43, 112, 191, 0.8), 
+                    0 0 140px rgba(43, 112, 191, 0.5); 
             }
         }
 
         /* بعد التدشين - الدائرة الزرقاء المشعة */
         .launched .circle {
+            /* تدرج أزرق فاتح مشع */
             background: 
-                radial-gradient(circle at 30% 30%, #4169e1 0%, #2a5298 50%, #1e3c72 100%);
-            border-color: rgba(126, 154, 197, 0.6);
+                radial-gradient(circle at 30% 30%, #5dade2 0%, #3a91e6 50%, #2b70bf 100%); 
+            border-color: rgba(153, 204, 255, 0.6); 
             animation: ultimateGlow 2s ease-in-out infinite;
             box-shadow: 
-                0 0 60px rgba(30, 60, 114, 1),
-                0 0 120px rgba(65, 105, 225, 0.8),
-                0 0 180px rgba(42, 82, 152, 0.6),
-                0 0 240px rgba(30, 60, 114, 0.4),
+                0 0 60px rgba(43, 112, 191, 1), 
+                0 0 120px rgba(93, 173, 226, 0.8), 
+                0 0 180px rgba(58, 145, 230, 0.6), 
+                0 0 240px rgba(43, 112, 191, 0.4), 
                 0 30px 80px rgba(0, 0, 0, 0.5),
                 inset 0 0 80px rgba(255, 255, 255, 0.2);
         }
@@ -315,9 +315,9 @@
             width: 130%;
             height: 130%;
             border-radius: 50%;
-            border: 3px solid rgba(65, 105, 225, 0.6);
+            border: 3px solid rgba(93, 173, 226, 0.6); 
             animation: expandRing 2.5s ease-out infinite;
-            box-shadow: 0 0 40px rgba(65, 105, 225, 0.8);
+            box-shadow: 0 0 40px rgba(93, 173, 226, 0.8); 
         }
 
         @keyframes expandRing {
@@ -363,19 +363,19 @@
         @keyframes ultimateGlow {
             0%, 100% {
                 box-shadow: 
-                    0 0 60px rgba(30, 60, 114, 1),
-                    0 0 120px rgba(65, 105, 225, 0.8),
-                    0 0 180px rgba(42, 82, 152, 0.6),
-                    0 0 240px rgba(30, 60, 114, 0.4),
+                    0 0 60px rgba(43, 112, 191, 1), 
+                    0 0 120px rgba(93, 173, 226, 0.8), 
+                    0 0 180px rgba(58, 145, 230, 0.6), 
+                    0 0 240px rgba(43, 112, 191, 0.4), 
                     0 30px 80px rgba(0, 0, 0, 0.5),
                     inset 0 0 80px rgba(255, 255, 255, 0.2);
             }
             50% {
                 box-shadow: 
-                    0 0 80px rgba(30, 60, 114, 1),
-                    0 0 160px rgba(65, 105, 225, 1),
-                    0 0 240px rgba(42, 82, 152, 0.8),
-                    0 0 320px rgba(30, 60, 114, 0.6),
+                    0 0 80px rgba(43, 112, 191, 1), 
+                    0 0 160px rgba(93, 173, 226, 1), 
+                    0 0 240px rgba(58, 145, 230, 0.8), 
+                    0 0 320px rgba(43, 112, 191, 0.6), 
                     0 30px 80px rgba(0, 0, 0, 0.5),
                     inset 0 0 100px rgba(255, 255, 255, 0.3);
             }
@@ -384,7 +384,7 @@
         .ripple {
             position: absolute;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(30, 60, 114, 0.6) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(43, 112, 191, 0.6) 0%, transparent 70%); 
             width: 0;
             height: 0;
             top: 50%;
@@ -420,12 +420,13 @@
             position: absolute;
             width: 14px;
             height: 60px;
-            background: linear-gradient(180deg, #1e3c72, #2a5298);
+            /* ألوان أزرق فاتح للملصقات */
+            background: linear-gradient(180deg, #2b70bf, #3a91e6); 
             animation: confetti-fall 6s linear;
             border-radius: 3px;
             box-shadow: 
-                0 0 10px rgba(30, 60, 114, 0.8),
-                0 0 20px rgba(30, 60, 114, 0.5);
+                0 0 10px rgba(43, 112, 191, 0.8), 
+                0 0 20px rgba(43, 112, 191, 0.5); 
         }
 
         @keyframes confetti-fall {
@@ -493,7 +494,50 @@
 
         /* --- استعلامات الوسائط (Media Queries) للتجاوب --- */
         
-        /* شاشات الجوال الصغيرة (أقل من 768 بكسل) */
+        /* ** التعديل 2: إضافة استعلام وسائط للأجهزة اللوحية (الآيباد - بين 769 بكسل و 1024 بكسل) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                max-width: 800px;
+            }
+            
+            .logo {
+                width: 40vw; 
+                height: 20vw;
+                max-width: 300px;
+                max-height: 150px;
+                margin-bottom: 35px;
+            }
+            
+            h1 {
+                font-size: 2.8rem;
+            }
+
+            .subtitle {
+                font-size: 1.3rem;
+                margin-bottom: 60px;
+            }
+
+            .launch-button {
+                width: 40vw; 
+                height: 40vw; 
+                max-width: 300px;
+                max-height: 300px;
+            }
+
+            .circle-text {
+                font-size: 2.3rem;
+            }
+
+            .countdown {
+                font-size: 4.5rem;
+            }
+            
+            .success-message {
+                font-size: 2.2rem;
+            }
+        }
+        
+        /* شاشات الجوال الصغيرة (أقل من 768 بكسل) - تم الإبقاء عليها */
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
@@ -536,7 +580,7 @@
             }
         }
         
-        /* شاشات الجوال الأصغر (أقل من 480 بكسل) */
+        /* شاشات الجوال الأصغر (أقل من 480 بكسل) - تم الإبقاء عليها */
         @media (max-width: 480px) {
             .launch-button {
                 width: 70vw; 
@@ -553,10 +597,10 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img src="scaled2.png" alt="شعار التجمع الصحي" style="width: 100%; height: 100%; object-fit: contain; padding: 20px;">
+            <img src="scaled2.png" alt="شعار الجهة" style="width: 100%; height: 100%; object-fit: contain; padding: 20px;">
         </div>
         
-        <h1>منصة الإدارة العامة للجودة وسلامة المرضى</h1>
+        <h1>تدشين منصة الادارة العامة للجودة وسلامة المرضى</h1>
         <p class="subtitle">اضغط على الدائرة للتدشين</p>
         
         <div class="launch-button" id="launchButton">
@@ -630,12 +674,12 @@
         function createConfetti() {
             // كل الشرايط بألوان زرقاء متدرجة
             const colors = [
-                'linear-gradient(180deg, #1e3c72, #2a5298)',
-                'linear-gradient(180deg, #2a5298, #4169e1)',
-                'linear-gradient(180deg, #1e3c72, #4169e1)',
-                'linear-gradient(180deg, #2a5298, #1e3c72)',
-                'linear-gradient(180deg, #4169e1, #2a5298)',
-                'linear-gradient(180deg, #5a7fc4, #4169e1)'
+                'linear-gradient(180deg, #2b70bf, #3a91e6)', 
+                'linear-gradient(180deg, #3a91e6, #5dade2)', 
+                'linear-gradient(180deg, #2b70bf, #5dade2)', 
+                'linear-gradient(180deg, #3a91e6, #2b70bf)', 
+                'linear-gradient(180deg, #5dade2, #3a91e6)', 
+                'linear-gradient(180deg, #7dc4f5, #5dade2)' 
             ];
             
             for (let i = 0; i < 120; i++) {
